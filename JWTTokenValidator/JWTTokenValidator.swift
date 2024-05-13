@@ -5,8 +5,6 @@
 //  Created by Thomas (privat) Leonhardt on 10.05.24.
 //
 
-import Foundation
-import SwiftUI
 import JWTKit
 
 public class JWTTokenValidator {
