@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214929D72BF2B2A00066FC76 /* JWTTokenValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214929D62BF2B2A00066FC76 /* JWTTokenValidator.swift */; };
+		214929DB2BF2B52D0066FC76 /* JWTKit in Frameworks */ = {isa = PBXBuildFile; productRef = 214929DA2BF2B52D0066FC76 /* JWTKit */; };
 		217A63ED2BEE20E900F31385 /* JWTTokenValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217A63E42BEE20E900F31385 /* JWTTokenValidator.framework */; };
 		217A63F22BEE20E900F31385 /* JWTTokenValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63F12BEE20E900F31385 /* JWTTokenValidatorTests.swift */; };
 		217A63F32BEE20E900F31385 /* JWTTokenValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 217A63E72BEE20E900F31385 /* JWTTokenValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214929D62BF2B2A00066FC76 /* JWTTokenValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTTokenValidator.swift; sourceTree = "<group>"; };
 		217A63E42BEE20E900F31385 /* JWTTokenValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWTTokenValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		217A63E72BEE20E900F31385 /* JWTTokenValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWTTokenValidator.h; sourceTree = "<group>"; };
 		217A63EC2BEE20E900F31385 /* JWTTokenValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWTTokenValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214929DB2BF2B52D0066FC76 /* JWTKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,12 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214929D92BF2B52D0066FC76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		217A63DA2BEE20E800F31385 = {
 			isa = PBXGroup;
 			children = (
 				217A63E62BEE20E900F31385 /* JWTTokenValidator */,
 				217A63F02BEE20E900F31385 /* JWTTokenValidatorTests */,
 				217A63E52BEE20E900F31385 /* Products */,
+				214929D92BF2B52D0066FC76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +81,7 @@
 		217A63E62BEE20E900F31385 /* JWTTokenValidator */ = {
 			isa = PBXGroup;
 			children = (
+				214929D62BF2B2A00066FC76 /* JWTTokenValidator.swift */,
 				217A63E72BEE20E900F31385 /* JWTTokenValidator.h */,
 			);
 			path = JWTTokenValidator;
@@ -110,6 +123,9 @@
 			dependencies = (
 			);
 			name = JWTTokenValidator;
+			packageProductDependencies = (
+				214929DA2BF2B52D0066FC76 /* JWTKit */,
+			);
 			productName = JWTTokenValidator;
 			productReference = 217A63E42BEE20E900F31385 /* JWTTokenValidator.framework */;
 			productType = "com.apple.product-type.framework";
@@ -144,6 +160,7 @@
 				TargetAttributes = {
 					217A63E32BEE20E900F31385 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					217A63EB2BEE20E900F31385 = {
 						CreatedOnToolsVersion = 15.3;
@@ -159,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 217A63DA2BEE20E800F31385;
+			packageReferences = (
+				214929D82BF2B2D50066FC76 /* XCRemoteSwiftPackageReference "jwt-kit" */,
+			);
 			productRefGroup = 217A63E52BEE20E900F31385 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214929D72BF2B2A00066FC76 /* JWTTokenValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +239,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -284,6 +306,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -341,7 +364,8 @@
 		217A63F72BEE20E900F31385 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -365,6 +389,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,7 +398,8 @@
 		217A63F82BEE20E900F31385 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -405,6 +431,7 @@
 		217A63FA2BEE20E900F31385 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -420,6 +447,7 @@
 		217A63FB2BEE20E900F31385 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -463,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		214929D82BF2B2D50066FC76 /* XCRemoteSwiftPackageReference "jwt-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/jwt-kit.git";
+			requirement = {
+				kind = exactVersion;
+				version = "5.0.0-beta.3";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		214929DA2BF2B52D0066FC76 /* JWTKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 214929D82BF2B2D50066FC76 /* XCRemoteSwiftPackageReference "jwt-kit" */;
+			productName = JWTKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 217A63DB2BEE20E800F31385 /* Project object */;
 }
