@@ -9,17 +9,6 @@ import Foundation
 import SwiftUI
 import JWTKit
 
-struct ExamplePayload: JWTPayload {
-    var sub: SubjectClaim
-    var exp: ExpirationClaim
-    var admin: BoolClaim
-
-    func verify(using key: some JWTAlgorithm) throws {
-        try self.exp.verifyNotExpired()
-    }
-}
-
-
 public class JWTTokenValidator {
     private var keyCollection = JWTKeyCollection()
     let key: String
